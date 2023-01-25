@@ -1,0 +1,808 @@
+@charset "UTF-8";
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+/* font-family: 'Hana B'; */
+
+
+/* layout */
+#wrap {}
+
+#header {
+    background-color: #fff;
+}
+
+#banner {
+    background-color: #a0d1ee;
+    height: 470px;
+}
+
+/* contents layout */
+#contents {}
+
+#cont1 {
+    height: 940px;
+    background-color: #f5f6f8;
+}
+
+/* container */
+.container {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* header/ */
+.header {
+    font-family: 'Hana B';
+}
+
+.header {}
+
+.header li {
+    margin: 7px 0;
+    background: url(../img/bar1.gif) no-repeat 0px 8px;
+    /* 메뉴사이의 바 인데 백그라운드 이미지 백그라운드 리피트 백그라운드 포지션 */
+}
+
+.header li a {
+    font-size: 13px;
+    display: block;
+    /* 부모의 성질이 옆으로 정렬이라 블록요소로 바꿔줘도 한줄씩 차지하지않음 */
+    padding: 8px 15px;
+}
+
+.header .list1 {
+    float: left;
+}
+
+.header .list1 li {
+    float: left;
+}
+
+/* 부모가 플로트 되있으면 자식이 플로트해도 안깨짐 */
+.header .list1 li:nth-child(2) {
+    background: none;
+}
+
+/* nth-child 이름이 같은 여러형제중 몇번째인지 선택 */
+
+.header .list1 li.green {}
+
+.header .list1 li.green a {
+    background-color: #20907f;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.header .list2 {
+    float: right;
+}
+
+.header .list2 li {
+    float: left;
+}
+
+/* 부모는 오른쪽 자식은 부모의 왼쪽 영역이 다름 */
+.header .list2 li a {
+    color: #797979;
+}
+
+.header .list2 li.logo {
+    margin: 11px 13px 11px 0;
+    /* 패딩주니까 깨져서 마진넣어서 자리맞춤 */
+}
+
+.header .list2 li.logo a {
+    border: 1px solid #cccccc;
+    /* boder: width style color */
+    padding: 3px 10px;
+    border-radius: 3px;
+}
+
+/* --------------------banner---------------------------------*/
+.ban_left {}
+
+.ban_left .ob {
+    position: absolute;
+}
+
+.ban_left .ob.ob1 {
+    /* 구름1 */
+    left: 151px;
+    top: 161px;
+    animation: gulum 3s 0.3s linear infinite both;
+}
+
+.ban_left .ob.ob2 {
+    /* 구름2 */
+    left: 217px;
+    top: 133px;
+    animation: gulum 3s 0.6s linear infinite both;
+}
+
+@keyframes gulum {
+    0% {
+        transform: translateX(-10px);
+    }
+
+    20% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(-10px);
+    }
+
+    75% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(-10px);
+    }
+}
+
+.ban_left .ob.ob3 {
+    /* 달력 */
+    left: 208px;
+    top: 78px;
+    animation: down 0.5s 0.5s both;
+}
+
+@keyframes down {
+    0% {
+        transform: translateY(-300px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes down-small {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes down-long {
+    0% {
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes left {
+    0% {
+        transform: translateX(500px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes left-b {
+    0% {
+        transform: translateX(500px);
+        opacity: 0;
+    }
+
+    85% {
+        transform: translateX(-180px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes tl {
+    0% {
+        transform: translate(110px, -100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    10% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(359deg);
+    }
+
+}
+
+.ban_left .ob.ob4 {
+    /* 쇼핑할땐 */
+    left: 250px;
+    top: 112px;
+    animation: left 0.5s 0.7s both;
+
+}
+
+
+.ban_left .ob.ob5 {
+    /*title */
+    left: 250px;
+    top: 140px;
+    animation: left 0.5s 0.9s both;
+
+}
+
+.ban_left .ob.ob6 {
+    /* 1 */
+    left: 264px;
+    top: 213px;
+    animation: down-long 0.5s 0.7s both;
+
+}
+
+.ban_left .ob.ob7 {
+    /* 1 */
+    left: 320px;
+    top: 213px;
+    animation: down-long 0.5s 0.9s both;
+
+}
+
+.ban_left .ob.ob8 {
+    /* 우산 */
+    left: 433px;
+    top: 302px;
+    animation: tl 0.3s 2.8s both;
+
+}
+
+.ban_left .ob.ob9 {
+    /* 슈트케이스 */
+    left: 355px;
+    top: 317px;
+    animation: down-small 0.3s 2.7s both
+}
+
+.ban_left .ob.ob10 {
+    left: 220px;
+    top: 343px;
+    animation: left-b 0.6s 1.8s both;
+}
+
+.ban_left .ob.ob11 {
+    /* 선물 */
+    left: 376px;
+    top: 268px;
+    animation: down-small 0.3s 2.9s both
+}
+
+.ban_left .ob.ob12 {
+    /* 박스 */
+    left: 360px;
+    top: 284px;
+    animation: down-small 0.3s 3s both
+}
+
+.ban_left .ob.ob13 {
+    /* 가방 */
+    left: 415px;
+    top: 274px;
+    animation: down-small 0.3s 3.2s both
+}
+
+.ban_left .ob.ob14 {
+    /* 작은바람 */
+    left: 501px;
+    top: 370px;
+    animation: scale 2s 3.4s infinite both;
+    transform-origin: left top;
+}
+
+.ban_left .ob.ob15 {
+    /* 큰바람 */
+    left: 501px;
+    top: 370px;
+    animation: scale 2s 3.3s infinite both;
+    transform-origin: left top;
+
+}
+
+.ban_left .ob.ob16 {
+    /* 원 */
+    left: 485px;
+    top: 119px;
+    animation: rotate 3s infinite linear;
+
+}
+
+.ban_left .ob.ob17 {
+    /* 서프라이즈 */
+    left: 378px;
+    top: 189px;
+    animation: scale 3s 4s both;
+    transform-origin: left center;
+    /* 애니메이션 시작점 변경 */
+}
+
+
+
+.ban_right {
+    width: 600px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+}
+
+.ban_right .br_tit {
+    background-color: #fff;
+    padding: 45px 0 60px 100px;
+}
+
+.ban_right .br_tit h3 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: -1px;
+    /* 자간 글자 사이의 간격 */
+}
+
+.ban_right .br_tit p {
+    font-size: 14px;
+    padding-top: 50px;
+    position: relative;
+}
+
+.ban_right .br_tit p::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #00907f;
+}
+
+.ban_right .br_tit p strong {
+    color: #00907f;
+}
+
+.ban_right .br_tit .login_btn {
+    position: absolute;
+    right: 60px;
+    top: 55px;
+}
+
+.ban_right .br_tit .login_btn ul {}
+
+.ban_right .br_tit .login_btn ul li {}
+
+.ban_right .br_tit .login_btn ul li a {
+    display: block;
+    width: 80px;
+    height: 80px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+}
+
+.ban_right .br_tit .login_btn ul li.lb1 {
+    margin-bottom: 1px;
+}
+
+.ban_right .br_tit .login_btn ul li.lb1 a {
+    background: #db3360 url(../img/ico_login.png) no-repeat center 18px;
+    padding-top: 50px;
+    /* 글자는 패딩값으로 이동시킴 */
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.ban_right .br_tit .login_btn ul li.lb1 a:hover {
+    background-color: #c4204c;
+    /* 원래값에 백그라운드로 여러개의 속성을 잡아놨는데 hover에 그대로 백그라운드를 주면 다른속성값이 아무것도 없이되게 됨 컬러만 바꾸는거임!*/
+}
+
+.ban_right .br_tit .login_btn ul li.lb2 a {
+    background: #333;
+    /* padding-top: 50px;
+    box-sizing: border-box; */
+    line-height: 80px;
+    /* 한줄일때 행간을 사용해서 중간으로 보냄 */
+    transition: 0.3s;
+}
+
+.ban_right .br_tit .login_btn ul li.lb2 a:hover {
+    background: #3c3f44;
+}
+
+/* float로 부모깨졌을때
+    1. ::after 사용하여 clear:both
+    2.부모에게 overflow:hidden -깨지는거 막을때 내영역보다 넘치는영역에 뭐가 나온다면 쓰면x 오류로 오류잡기 
+    3.깨진 부모에게 강제로 높이값*/
+
+.ban_right .br_btn {
+    height: 50px;
+    margin-top: 25px;
+
+}
+
+.ban_right .br_btn ul {
+    overflow: hidden;
+    background-color: #00907f;
+}
+
+.ban_right .br_btn ul li {
+    float: left;
+    font-size: 14px;
+    line-height: 50px;
+    /* 한줄일때 행간으로 센터정렬 */
+    position: relative;
+    width: 25%;
+    text-align: center;
+}
+
+.ban_right .br_btn ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 18px;
+    width: 1px;
+    height: 14px;
+    background-color: #62bdb1;
+}
+
+.ban_right .br_btn ul li:first-child:before {
+    width: 0;
+    height: 0;
+    /* li중 첫째중에 비포로 잡힌 바를 넓이와 높이를 없애버림 */
+}
+
+.ban_right .br_btn ul li a {
+    color: #fff;
+    display: block;
+}
+
+/* nav--------------------------------------------------------------- */
+#nav {
+    position: absolute;
+    left: 0;
+    top: -50px;
+    /* 다른애들이 딸려있는 네비를 움직여줌 */
+    background-color: #fff;
+    width: 100%;
+    border-bottom: 1px solid #e6e6e6;
+    font-family: 'Hana B';
+    padding: 30px 0;
+
+}
+
+#nav .gnb {
+    padding-left: 60px;
+}
+
+#nav .gnb li {
+    display: inline;
+    padding: 10px;
+    /* 인라인 요소는 패딩 마진의 상하가 적용 x 개발자모드로 잡히긴해도 영역을 차지하지않음 */
+}
+
+#nav .gnb li a {
+    display: inline-block;
+    padding: 10px 16px;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+#nav .gnb li a:hover {
+    background-color: #00907f;
+    color: #fff;
+    border-radius: 3px;
+}
+
+#nav .gnb_right {
+    position: absolute;
+    right: 50px;
+    top: 30px;
+}
+
+#nav .gnb_right li {
+    float: left;
+    /* 부모가 position: absolute; 일때 안깨짐*/
+    /* a가 블록이 되도 부모가 플로트 되어있으면 블록요소가 되지만 영역차지를 글자만큼만 함 float가 블록요소를 강제로 옆으로 정렬 */
+}
+
+#nav .gnb_right li a {
+    display: block;
+    padding: 11px 20px;
+    font-size: 14px;
+}
+
+#nav .gnb_right li.gr1 {
+    margin-right: 10px;
+}
+
+#nav .gnb_right li.gr1 a {
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+#nav .gnb_right li.gr1 a:hover {
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+#nav .gnb_right li.gr2 {}
+
+#nav .gnb_right li.gr2 a {
+    background-color: #404b57;
+    color: #fff;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+#nav .gnb_right li.gr2 a:hover {
+    background-color: #000;
+}
+
+#nav .gnb_event {
+    /* 대문자로 변화 */
+    text-transform: uppercase;
+    /* 모든 문자 를 대문자로 */
+    /* text-transform: lowercase ; 다 소문자 */
+    /* text-transform: capitalize; 첫글자만 대문자 */
+    position: absolute;
+    left: 20px;
+    top: -35px;
+    background-color: #3c3f44;
+    color: #fff;
+    font-size: 14px;
+    padding: 3px 23px 2px;
+    line-height: 30px;
+}
+
+#nav .gnb_event a {}
+
+#nav .gnb_search {
+    position: absolute;
+    right: 290px;
+    top: 25px;
+    width: 50px;
+    height: 50px;
+    background: url(../img/gnb_search.png) no-repeat;
+}
+
+
+/* #card -------------------------------------------------------------*/
+#card {
+    padding-top: 60px;
+    /* 영역이 겹치기때문에 패딩으로 위에서부터 밀어냄 */
+}
+
+#card .card_img {
+    float: left;
+    width: 50%;
+    height: 285px;
+    background-color: #fff;
+}
+
+#card .card_desc {
+    float: left;
+    width: 50%;
+    height: 285px;
+    background-color: #eaebef;
+
+}
+
+/* .card_img--------------------------------------------------------- */
+.card_img {
+    padding: 18px 47px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.card_img h4 {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 11px;
+}
+
+.card_img .card_banner {}
+
+.card_img .card_banner ul {}
+
+.card_img .card_banner ul li {
+    float: left;
+    width: 148px;
+    margin-left: 30px;
+    text-align: center;
+}
+
+.card_img .card_banner ul li:first-child {
+    margin-left: 0;
+}
+
+.card_img .card_banner ul li a {}
+
+.card_img .card_banner ul li a img {
+    width: 100%;
+}
+
+.card_img .card_banner ul li a em {
+    font-size: 14px;
+    padding-top: 8px;
+    display: block;
+    /* 인라인요소는 패딩의 상하는 안먹음 */
+}
+
+.card_img .card_link{
+    margin-top: 30px;
+
+}
+
+.card_img .card_link ul{
+    /* overflow: hidden;  clearfix 랑 같음*/
+
+}
+
+.card_img .card_link ul li{
+    float: left;
+    margin-right: 11px;
+}
+.card_img .card_link ul li:last-child{
+    margin-right: 0;
+}
+
+
+.card_img .card_link ul li a{
+    display: block;
+    border:  1px solid #e8e8e8;
+    font-size: 15px;
+    padding: 10px 8px;
+    transition: 0.3s;
+}
+.card_img .card_link ul li a:hover{
+    border-color:#666 ;
+    color: #00907f;
+}
+.card_img .cardmore-btn{
+    position: absolute;
+    right: -40px;top: 60px;/* ir의 left 값이 있어서 라이트가 안먹음
+    오른쪽보다 왼쪽이 밑에보다 위쪽의 속성값이 더쎔 */
+    left: auto;/* ir의 속성값 left를 없애줌 */
+    width: 40px; height: 151px;
+    background: url(../img/btn_card_v01.png) no-repeat;
+}
+/* card_desc--------------------------------------------------------- */
+.card_desc{
+    text-align: center;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+.card_desc dl{}
+.card_desc dl dt{
+    font-size: 15px;
+    color: #777;
+    font-weight: 500;
+}
+.card_desc dl dd{}
+
+.card_desc dl dd.cd1{
+    font-size: 23px;
+    margin: 26px 0 45px;
+}
+.card_desc dl dd.cd1::before,/* 비포와 애프터를 같이씀 , */
+.card_desc dl dd.cd1::after{
+    content: '"'; /* 쌍따옴표를 쓸라면 작은따옴표로 싸야댐 */
+    color: #00907f;
+}
+
+.card_desc dl dd.cd2{}
+.card_desc dl dd.cd2 ul{}
+.card_desc dl dd.cd2 ul li{
+    display: inline;
+    /* 옆으로 정렬시킬때 알수없는 틈이생김 폰트싸이즈따라다름/ 여백의값을 줘야하거나 지정시키려면 float으로 정렬시켜야함 */
+}
+.card_desc dl dd.cd2 ul li a{
+    display: inline-block;
+    padding: 8px 3px;
+    border: 1px solid #fff; /* boxsize-boderbox 또는 boder를 줘서 hover되었을때 테두리때문에 영역이 움직이는걸 막음 */
+    background-color: #fff;
+    transition: all 0.3s;/* 따로 적용시킬수 있다 값을 줘야함 */
+
+}
+.card_desc dl dd.cd2 ul li a:hover{
+    border: 1px solid #bbb;
+    
+}
+/* ----------------------------event--------------------------- */
+#event{
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+}
+#event>div{
+    float: left;
+}
+
+/* event_box1 */
+.event_box1{}
+.event_box1>div{
+    width: 300px;
+    height: 188px;
+    box-sizing: border-box;
+    padding-top: 110px;
+}
+.event_box1>div .eb_desc{
+    font-size: 16px;
+    font-weight: 300;
+}
+.event_box1>div .eb_tit{
+    font-size: 20px;
+    
+}
+
+.event_box1 .eb_banner1{
+    background: #01937f url(../img/event_icon1.png) no-repeat 
+    center 25px ;
+}
+.event_box1 .eb_banner2{
+    background: #766e9c url(../img/event_icon2.png) no-repeat 
+    center 25px ;
+}
+.event_box1 .eb_banner3{
+    background: #43587d url(../img/event_icon3.png) no-repeat 
+    center 25px ;
+}

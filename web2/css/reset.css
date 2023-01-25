@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* 여백초기화 */
+body,div,dl,dd,dt,ul,li,h1,h2,h3,h4,h5,h6,form,input,legend,textarea,select,fieldset,p,button{
+    margin: 0;padding: 0;
+}
+
+/* 링크초기화 링크의 폰트 색깔*/
+a{
+    text-decoration: none; color: #273743;
+}
+/*폰트초기화 */
+body,input,textarea,select,button,table{
+    font-family: 'Noto Sans KR','나눔 고딕','Nanum Gothic','Malgun Hothic','맑은 고딕','돋움','Dotum', sans-serif;
+    font-size: 12px;
+}
+
+/* 블릿기호 초기화 */
+li,ol,ul{
+    list-style: none;
+}
+/* 폰트굵기초기화 */
+strong{
+    font-weight: normal;
+}
+/* 제목스타일 초기화 */
+h1,h2,h3,h4,h5,h6{
+    font-size: 12px;
+    font-weight: normal;
+}
+
+/* ir효과 접근성용이하게 (몸이 불편한 사람들을 위해) */
+.ir{
+     width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    position: absolute;
+    left: 0;top: 0;
+}
+/* 이테릭체(기울임) 초기화 em,address, */
+em,address{
+    font-style: normal;
+}
