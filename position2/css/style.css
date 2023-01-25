@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.치료::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.전체 {
+    color: red;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: gray;
+    height: 600px;
+}
+
+.전체 .첫째 {
+    background-color: aqua;
+    padding: 20px;
+}
+
+.전체 .첫째 .첫자 {
+    background-color: bisque;
+    width: 32%;
+    height: 200px;
+    float: left;
+    margin-right: 2%;
+
+}
+
+.전체 .첫째 .첫자.첫자1 {
+    position: relative;
+    overflow: hidden;
+}
+
+.전체 .첫째 .첫자.첫자1 .하 {
+    position: relative;
+    /* 앱솔루트 기준잡아주는 relative */
+    background-image: url(../image/img1.jpg);
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    /* background-position: center;사진의 중앙을 줌 x축,y축조절가능 값이 중복될때 한번만 써도됨 */
+    /* background-size:cover
+    내영역에 첫번째로 넓이를 맞춤
+    두번째 높이에 빈공간이 있을때 비율을 맞추면서 높이를 맞춤
+    짤릴수가있다.
+    길이가 긴 이미지는 넓이를 맞추면 커버됨 *이상해짐 */
+}
+
+/* 태그이름에는 .을쓰지않는다 
+경로부를때 (../나의 상위경로)( /하위요소)*/
+
+.전체 .첫째 .첫자.첫자1 .하 h4 {
+    position: absolute;
+    /* 포지션을 가지고있는 상위요소가 기준이됨 */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.전체 .첫째 .첫자.첫자1 .상{
+    height: 100%;
+    background-image: url(../image/img2.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    /* position: absolute; 되면 자식의 공간만 차지
+    넓이 재설정해야함 */
+    left: 100%;top: 0;
+    width: 100%;
+    transition: 0.3s;/* hover한테 시간 주면 부자연스러움 */
+}
+.전체 .첫째 .첫자.첫자1:hover .상{
+    left: 0;
+}
+
+.전체 .첫째 .첫자.첫자1 .상 h4{
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+
+.전체 .첫째 .첫자.첫자2 {
+    position: relative;
+    overflow: hidden;
+}
+.전체 .첫째 .첫자.첫자2>div {
+    height: 100%;
+    position: absolute;
+    left: 0;top: 0;
+    width: 100%;
+}
+.전체 .첫째 .첫자.첫자2>div h4{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.전체 .첫째 .첫자.첫자2 .상 {
+    background-image: url(../image/img3.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+    /* z-index: ; 는 포지션이 있어야 사용가능 (relative,absolute,fixed)  z축을 이동가능하게함!
+    자식영역의 z축값을 올려도 부모의 영역의 값이 다른 요소의 값보다 낮으면 효과없음*/
+    top: -100%;
+    transition: 300ms;
+}
+.전체 .첫째 .첫자.첫자2:hover .상{
+    top: 0;
+}
+.전체 .첫째 .첫자.첫자2 .상 h4 {}
+.전체 .첫째 .첫자.첫자2 .하 {
+    background-image: url(../image/img4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.전체 .첫째 .첫자.첫자2 .하 h4{}
+
+
+
+
+
+
+
+
+
+
+
+.전체 .첫째 .첫자.첫자3 {
+    margin-right: 0;
+   position: relative;
+}
+
+
+.전체 .첫째 .첫자.첫자3>div{
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 0;top: 0;
+    width: 100%;
+}
+
+.전체 .첫째 .첫자.첫자3>div h4{
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.전체 .첫째 .첫자.첫자3 .상{
+    background-image: url(../image/img5.jpg);
+    z-index: 2;
+    transition: 0.3s;
+    opacity: 0;
+    transform: scale(0.3);
+    border-radius: 10px;/* 둥근테두리  */
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);/* transition-timing-function: cubic-bezie ease가속도조절 */
+    
+}
+.전체 .첫째 .첫자.첫자3:hover .상{
+    opacity: 1;/* 투명조절 */
+    transform: scale(1);/* 크기조절 */
+}
+
+.전체 .첫째 .첫자.첫자3 .하{
+    background-image: url(../image/img6.jpg);
+}
+
+
+.전체 .둘째{
+    background-color: green;
+    /*
+     %기준 
+    width는 부모(.전체)의 넓이
+    height는 부모(.전체)의 높이 , 단 부모가 높이값이 있어야함
+    
+    padding 또는 마진은 상하좌우 모두 부모의 넓이 기준
+    */
+    width: 30%;
+    height: 30%;
+    padding: 5%;
+   margin-top: 5%;
+}

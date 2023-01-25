@@ -1,0 +1,90 @@
+@charset "UTF-8";/* 글자깨짐방지 */
+
+*{
+    margin: 0;padding: 0;
+}
+
+.약::after{
+    content: ""; clear: both; display: block;
+}/* css상 가상요소,태그 dom tree viewer에서 안보임 */
+
+.전체{
+    background-color: #A31ACB;
+    width: 1000px;
+    margin: 30px auto 0;
+    padding: 20px;
+    box-sizing: border-box;/* 정해놓은 넓이값이상으로 못나가게 사이즈변경 */
+
+}
+
+/* reset */
+/* 폰트기본값 16px */
+h1,h2,h3,h4,h5,h6{
+    font-size: 16px;
+    font-weight: normal;/* 폰트의 두께 */
+
+}
+
+a{
+    text-decoration: none;/* 밑줄 */
+    color: #222;/*  */
+}
+
+.전체>div + div{
+    margin-top: 30px;
+}/* +는 형제를 나타냄 인접선택자 */
+
+.전체 .첫째{
+    background-color:#F7F5EB ;
+    padding: 20px;
+}
+.전체 .첫째:hover{
+    color: green;
+} /* if 한다면 /html안에 존재요소인데 if 한다면은 가상클래스 */
+
+.전체 .첫째 .첫자{
+    background-color: blue;
+    width: 49%;
+    height: 200px;
+    float: left;
+}
+
+.전체 .첫째 .첫자.첫째자식1{
+    margin-right: 2%;
+    
+}
+
+.전체 .첫째 .첫자.첫째자식2{
+
+}
+
+
+
+.전체 .둘째{
+    background-color:#0081C9 ;
+    
+}
+
+.전체 .둘째 .앵커{
+    background-color: coral;
+}
+
+.전체 .둘째 p{
+    width: 150px;
+    margin-top: 20px;
+}
+
+.전체 .둘째 p a{
+
+}
+
+.전체 .둘째 p a img{
+    width: 100%;/* 인라인요소는 공간인식을 못함 그래도 넓이와 높이값을 주어도 적용x // 예외 img,button태그는 인라인요소이지만 넓이와 높이가 적용됩니다 
+    인라인요소는 자식의 넓이를 따라감*/
+    }
+    /* 인라인 요소안에는 인라인요소만들어간다(인라인요소안에 블럭요소 들어가지 않음 블럭요소안에는 인라인요소,블럭요소 모두들어감) 
+    span p (x) p span(o) span img(o)*/
+
+.전체 .셋째{
+    background-color: aqua;
+}

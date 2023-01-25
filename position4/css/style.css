@@ -1,0 +1,258 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+.clear::after{
+    content: ""; clear: both; display: block;
+}
+.전체{
+    background-color: aqua;
+    width: 1000px; margin: 0 auto; /* 넓이주고 가운데정렬 */
+    margin-top: 100px;/* 위에 공간주기 덮어쓰기 */
+    padding: 30px 0;/* 위아래로 30 양옆으로 0 */
+}
+.전체 .첫째{
+    background-color: blue;
+    width: 900px; /* 부모의 영역에서 900만쓰는거 */
+    margin: 0 auto;/* 가운데 정렬 */
+    padding: 30px;/* 패딩값 */
+    box-sizing: border-box;/* 넓이가 960이 되는데 900을 강제로 맞춰야할때 테두리안으로 들어가서 패딩넣어라 */
+}
+.전체 .첫째>div{
+    background-color: brown;
+    height: 200px;/* 높이값 */
+    width: 47.5%;/* 넓이를 90프로/ 47.프로씩 차지해라 */
+    float: left;/* 왼쪽으로 붙어라 */
+}
+.전체 .첫째 .첫손1{
+    margin-right: 5%;/* 남은 5프로를 첫손1오른쪽에 여백주기 */
+    background-image: url(../img/img1.jpg);/* 배경이미지넣기 */
+    background-size: cover; /* 배경사이즈 커버해라 */
+    position: relative;/* 앱솔루트의 기준잡아주기 */
+    overflow: hidden;/* 내영역밖에는 보이지마라 */
+    
+    
+
+}
+.전체 .첫째 .첫손1 h4{
+    position: absolute;/* 포지션앱솔루트 */
+    left: 50%; top:50%;/* 부모로부터 반절 반절 */
+    transform: translate(-50%,-50%);/* 자신의 위치에서 포지션조절 */
+    background-color: rgba(255,255,255,0.3);/* 배경색 rgb랑 투명도 알파값 */
+    color: #222;/* 텍스트 칼라 */
+    padding: 10px 30px;/* 패딩값 */
+    border-radius: 10px;/* 테두리 둥글게 */
+}
+.전체 .첫째 .첫손1 .right{
+    position: absolute;/* 첫손1과 위치맞추기 */
+    left: 100%; top: 0;/* 동작주려고 위치변경 */
+    width: 100%;/* 첫손1의 자식이므로 넒이와 높이값을 100%다 차지하라고 */
+    height: 100%;
+    background: url(../img/img2.jpg);
+    background-size: cover;
+    transition: 0.3s;/* 부드럽게 동작하게 시간줌 */
+}
+.전체 .첫째 .첫손1:hover .right{
+    left:0;/* 첫손1에 마우스 올리면 right가 레프트0자리로오게 */
+}
+.전체 .첫째 .첫손2{
+    overflow:hidden;
+    position: relative;/* 비디오의 포지션 앱솔루트의 기준 */
+}
+.전체 .첫째 .첫손2 video{
+    width: 100%;/* 첫손2의 넓이를 기준으로 비율에 맞게 사이즈조절 높이는 적용x */
+    position: absolute; /* 위치를 조절 */
+    left: 50%;top: 50%;
+    transform: translate(-50%,-50%);
+}
+.전체 .둘째{
+    background-color: orange;
+    width: 900px; margin: 30px auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.전체 .둘째>div{
+    float: left;
+    width: 23.5%;
+    margin-right: 2%;
+    background-color: #fff;
+    height: 200px;
+    position: relative;/* 둘자들의 앱솔루트 포지션의 기준은 각각의 둘자들 */
+}
+.전체 .둘째>div .둘자4{}
+
+.전체 .둘째>div>div{
+    position: absolute;
+    left: 50%;top: 50%;
+    transform:  translate(-50%, -50%);/* 포지션값의 기준이 좌상단 꼭지점이기때문에 나의 영역을 기준으로 이동시켜 중간으로 오게끔 */
+    background-color: blueviolet;
+    height: 40px; width: 100px;
+    text-align: center;/* 글자를 좌우기준으로 중간에 위치 */
+    line-height: 40px;/* 한줄일때 행간으로 위아래 중간 위치시킴 */
+
+}
+.전체 .둘째>div>div.둘손2{
+    left: auto;/* left값이 쎄지만 여기 스타일시트에는 left값의 힘을 없앰 */
+    top: auto;/* 위에 top값을 없앰 */
+    bottom: 0;
+    right: 0;
+    transform: none;
+}
+
+.전체 .둘째>div>div.둘손3{
+    left: auto; right: 0;
+    transform: none;
+    top: 0;
+
+}
+
+.전체 .둘째>div>div.둘손4{
+    top: auto;
+    bottom: 0;
+    left: 0;
+    transform: none;
+}
+
+.전체 .둘째>div>div{}
+
+.전체 .둘째 .둘자1{
+    
+}
+.전체 .둘째 .둘자2{}
+.전체 .둘째 .둘자3{}
+.전체 .둘째 .둘자4{
+    margin-right: 0;
+}
+
+.전체 .셋째{
+    background-color: #a2d5a1;
+    width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.전체 .셋째>div{
+    background-color:cornflowerblue;
+    width: 45%;
+    float: left;
+    height: 200px;
+    
+}
+.전체 .셋째>div.세자1{
+    margin-right: 10%;
+    position: relative;
+    overflow: hidden;
+}
+
+.전체 .셋째>div.세자1>div{
+    position: absolute;
+    left: 0; top: 0; width: 100%; height: 100%;
+    
+}
+
+.전체 .셋째>div.세자1>div h4{
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff; font-size: 40px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    
+}
+
+.전체 .셋째>div.세자1>div.세손1{
+    z-index: 10;
+    background-image: url(../img/img1.jpg);
+    background-size: cover;
+    left: 100%;
+    transition: 0.3s;
+}
+
+.전체 .셋째>div.세자1:hover>div.세손1{
+    left: 0;
+}
+
+.전체 .셋째>div.세자1>div.세손2{
+    background-image: url(../img/img2.jpg);
+    background-size: cover;
+}
+
+.전체 .셋째 .세자2{
+    overflow: hidden;
+    /* 부모의 영역 아래쪽 튀어나온부분을 감춤  */
+    position:relative
+}
+.전체 .셋째 .세자2 video{
+    width: 100%;/* 사이즈조절 */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.전체 .넷째{
+    width: 900px;
+    margin: 0 auto;
+    background-color: tomato;
+    box-sizing: border-box;
+    padding: 30px;
+}
+.전체 .넷째>div{
+    float: left;
+    background-color: violet;
+    width: 45%;
+    margin-right: 10%;
+    height: 200px;
+
+}
+.전체 .넷째>div.네자1{
+    position: relative;
+    overflow: hidden;
+}
+.전체 .넷째>div.네자2{
+    margin-right: 0;
+}
+.전체 .넷째>div.네자1>div{
+    position: absolute;
+    left: 0;top: 0;
+    width: 100%;height: 100%;
+}
+.전체 .넷째>div.네자1>div.네손1{
+    background-image: url(../img/img1.jpg);
+    background-size: cover;
+    z-index: 10;
+    left: 100%;
+    transition: 0.3s;
+  
+}
+.전체 .넷째>div.네자1:hover>div.네손1{
+    left: 0;
+}
+.전체 .넷째>div.네자1>div h4{
+    position: absolute;
+    left: 50%; top:50%;
+    background-color: #fff;
+    transform: translate(-50%,-50%);
+    padding: 20px 30px;
+    border-radius: 5px;
+
+}
+.전체 .넷째>div>div.네손2{
+    background-image: url(../img/img2.jpg);
+    background-size: cover;
+}
+.전체 .넷째>div>div.네손2 h4{}
+
+.전체 .넷째 .네자2{
+    overflow: hidden;
+    position: relative;
+}
+.전체 .넷째 .네자2 video{
+    width: 100%;
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%,-50%);
+}

@@ -1,0 +1,104 @@
+@charset "UTF-8";
+*{
+    margin: 0;padding: 0;
+}
+ul,ol,li{
+    list-style: none;
+}
+.clear::after{
+    content: ""; clear: both; display: block;
+}
+
+#전체{
+    background-color: coral;
+    padding: 20px;
+    width: 800px;
+    margin: 0 auto;
+}
+#전체 .첫째자식{
+    background-color: brown;
+    padding: 20px;
+}
+#전체 .첫째자식 .첫째손자{
+    background-color: blue;
+    height: 200px;
+    background-image: url(../img/img1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#전체 .첫째자식 .첫손2{
+    background-color: green;
+    opacity: 0;/* 투명도 */
+    position: absolute;
+    left: 0;top: 0;
+    width: 100%;
+    transition: 0.3s;
+    background-image: url(../img/img2.jpg);
+}
+#전체 .첫째자식:hover .첫손2{
+    opacity: 1;
+}
+#전체 .첫째자식 .wrap{
+    position: relative;/* 첫째자식의 패딩때문에 첫손1과 영역이 완벽하게 겹치지않음 그래서 하나의 새로운 영역을 만들어서 겹치게 만들어줌 그게 wrap임 */
+}
+#전체 .둘째자식{
+    background-color: aqua;
+    margin-top: 30px;
+    /* width: 500px; */
+    height: 200px;
+    padding: 20px;
+    box-sizing: border-box; /* 패딩까지 높이에 포함시킴 적은값 그대로 패딩까지 포함해서 나오게 넓이는 자동으로 보더박스되어있음*/
+    position: relative;
+}
+
+#전체 .둘째자식 .둘째손자{
+    background-color: gold;
+    position: absolute;
+    left: 0px;
+    top: 0px; /* left:0px top:0px right:0 bottom:0 은 넓이 100% 높이100%랑 같다 */
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    height: 100px;
+    /* width: 100%; 굳이 적지않아도 기본값 블록요소이기 때문 */ /* 자식은 부모의 패딩의 침범하지 못한다 */
+}
+
+#전체 .둘째자식{
+    margin-bottom: 50px;
+    /* 마진은 높이는 젤큰값만 좌우는 합쳐서  */
+
+}
+
+#전체 .셋째자식{
+    background-color: crimson;
+    margin-top: 30px;
+}
+#전체 .셋째자식>div{
+    background-color: violet;
+    width: 40%;
+    margin: 0 5%;/* 상하0 좌우 5% */
+    float: left;
+}
+#전체 .셋째자식 .셋째손자{}
+
+/* ol,ul의 자식은 li만 가능 다른태그 ㄴㄴ */
+#전체 .셋째자식>div ol{
+    list-style: upper-roman;
+}
+#전체 .셋째자식>div ul{
+    list-style-type: square;
+}
+#전체 .셋째자식>div li{
+    border: 1px solid gray;
+}/* li는 불록요소임 */
+#전체 .넷째자식{
+    background-color: tomato;
+    margin-top: 30px;
+    padding: 20px;
+}
+#전체 .넷째자식 .넷째손자 dt{
+    background-color: azure;
+}
+#전체 .넷째자식 .넷째손자 dd{
+    background-color: slateblue;
+}/* 블록요소임 dt,dd */

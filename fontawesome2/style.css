@@ -1,0 +1,25 @@
+@charset "UTF-8";
+.section::after{
+    content: "\f45f"; font-family: "Font Awesome 5 free";
+    font-weight: 900;
+}
+/* css에서 넣기 폰트어썸사이트에서 개발자모드로 찝어서 넘버 콘텐츠안에 넣고 그위에 부모 폰트패밀리 폰트웨이트 가져와서 넣어주기 */
+/* fontawesome5를css에서 사용하기 위해서는 font-weight ,font-family가  같이 들어가야함 무료버전은 family에 pro를 free로 바꿔줘야함 */
+
+.wrap2{
+    position: relative;
+    margin-top: 50px;
+    width: 400px;height: 400px;
+    background-color: deeppink;
+}
+
+.wrap2 .section2{
+    position: absolute;
+    left: calc(50% - 50px);top: calc(50% - 50px);
+    /* 영역을 transform:translate로 위치를 잡았는데 애니메이션을 주다보면 영역이 깨지거나 이동하는데 포지션 값을 계산하라고 calc(50% - 50px); 이렇게 씀 근데 -를 띄워써야 음수로 인식안함 */
+    width: 100px; height: 100px;
+    background-color: blue;
+    /* transform: translate(-50%,-50%); */
+
+
+}
