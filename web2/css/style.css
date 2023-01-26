@@ -757,7 +757,7 @@
 }
 .card_desc dl dd.cd2 ul li a{
     display: inline-block;
-    padding: 8px 3px;
+    padding: 8px 30px;
     border: 1px solid #fff; /* boxsize-boderbox 또는 boder를 줘서 hover되었을때 테두리때문에 영역이 움직이는걸 막음 */
     background-color: #fff;
     transition: all 0.3s;/* 따로 적용시킬수 있다 값을 줘야함 */
