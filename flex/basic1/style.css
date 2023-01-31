@@ -1,0 +1,23 @@
+@import url(/basic1/basic.css);
+
+.container{
+    display: flex;
+    /* display: inline-flex; */ /* 인라인요소처럼 자식의 넓이만큼 부모가 영역을 쓴다 */
+    flex-direction: row;/* row-기본값 
+    row-reverse 321순으로 오른쪽으로 붙음*/
+    /* flex-direction: column;  행을기준으로 */
+    /* flex-direction: column-reverse; 역수직 */
+    /* 줄넘김 처리설정 */
+    flex-wrap: nowrap;
+    /* 기본값 nowrap 줄바꿈 wrap 역순 줄바꿈wrap-reverse */  
+    /* flex-flow: flex-direction flex-wrap; flow는 두개를 합친것 */
+    flex-flow: row nowrap;
+}
+
+.item{
+    width: 40%;
+}
+.item:nth-child(1){
+    /* white-space: nowrap; - 줄을 밑으로 떨어뜨리지않겠다(줄바꿈을) */
+    /* float은 영역이 넘치면 형제가(막내)가 밑으로 떨어지는데 flex는 가지고감 */
+} 

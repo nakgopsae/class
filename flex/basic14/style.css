@@ -1,0 +1,27 @@
+@import url(/basic14/basic.css);
+
+.container{
+    display: flex;
+
+}
+ 
+
+.item{
+ width: 150px;
+       
+}
+
+.item:nth-child(1){
+ 
+}
+
+.item:nth-child(2){
+  
+
+}
+
+.item:nth-child(3){
+    margin-left: auto; /* 남는 공간을 내 왼쪽에 마진으로 다쓰겠다 */
+ 
+
+}

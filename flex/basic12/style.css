@@ -1,0 +1,32 @@
+@import url(/basic1/basic.css);
+
+.container{
+    display: flex;
+
+}
+ 
+
+.item{
+   
+}
+
+.item:nth-child(1){
+    /* flex: 1; */
+    /* flex: 1 1 0; */
+    white-space: nowrap;
+    width: 20%;
+}
+
+.item:nth-child(2){
+    /* flex: 3; */
+    /* flex: 3 1 0; */
+    width: 60%;
+
+}
+
+.item:nth-child(3){
+    /* flex: 1; */
+    width: 20%;
+
+}
+/* flex의 grow baisis는 비율로 나눌때 안에 자식들이 영역이 크면 지맘대로 됨 그래서 강제로 넓이를 주는게 낫음 확실함 */

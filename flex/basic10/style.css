@@ -1,0 +1,20 @@
+@import url(/basic1/basic.css);
+
+.container{
+    display: flex;
+
+}
+ 
+
+.item{}
+
+.item:nth-child(1){
+
+  width: 200px;
+  flex-shrink: 0;
+ 
+}
+
+.item:nth-child(2){
+  flex-grow: 1;
+}

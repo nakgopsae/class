@@ -1,0 +1,21 @@
+@import url(/basic1/basic.css);
+
+.container{
+    display: flex;
+
+}
+ 
+
+.item{
+  /* 0-->false / 0이외는--> true */
+  flex-grow: 1;
+  flex-shrink: 1;/* 기본값 */
+  width: 150px;
+ 
+}
+.item:nth-child(1){
+  /* width: 150px; */ /* 넓이값을 줌 */
+  /* flex-shrink: 0; *//* 150이하로 줄어들지않음 */
+  flex-shrink: 2;/* 두배로 줄어든다 */
+
+}

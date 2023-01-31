@@ -1,0 +1,14 @@
+@import url(/basic1/basic.css);
+
+.container{
+    display: flex;
+
+}
+ 
+
+.item{
+    flex-basis: 100px;/* 넓이를 100px줘도 안에 자식이 넘쳐버리면 넓이값 오바함 item에 bbbbbb가 글자가 많아서 100px넘김 */
+  /* word-wrap: break-word; 나중에 */
+  width: 100px;
+  flex-basis: auto;/* 기본값  안적어도 된다*/
+}

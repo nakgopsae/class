@@ -1,0 +1,22 @@
+@import url(/basic5/basic.css);
+
+.container{
+    display: flex;
+    height: 50vh; 
+    /* flex시킨 자식들은 부모의 높이를 따라감 */
+    flex-direction: row;
+    flex-wrap: wrap;/* flex는 넓이값을 오바해서줘도 부모한테 맞추기에 줄넘김으로 아이템을 밑으로 내림  적게줘도 부모한테 맞춤*/
+    /* 여러행정렬 */
+    align-content: stretch;/* 기본값 */
+    align-content: flex-start;/* 위로 */
+	align-content: flex-end;/* 바닥으로 */
+	align-content: center;/* 중간으로 모여라 */
+	align-content: space-between;/* 사용하지않는 공간을 중간에 사이에
+    두겠다 양끝으로 붙음 */
+	align-content: space-around;/* 아이템의 주위에 공간을 두겠다 */
+	align-content: space-evenly;/* 모든 공간을 동일하게 두겠다 */
+}
+.item{
+    height: 100px; /* 부모의 높이를 가더라도 높이값이 있으면 따로적용 */
+    width: 40%;
+}

@@ -1,0 +1,18 @@
+@import url(/basic1/basic.css);
+
+.container{
+    display: flex;
+
+}
+ 
+
+.item{
+  flex-grow: 0;/* 기본값 */
+  width: 100px;
+  flex-grow: 1;/* 남은 여백을 가지고 아이템안에 빈공간을 같은비율로 맞추는속성 1대1대1을맞춘거고 b가 글자가 많기때문에 더커진거 */
+  /* 가지고 있는 넓이보다 커질수있다 */
+
+}
+.item:nth-child(1){ flex-grow: 1;}
+.item:nth-child(2){ flex-grow: 2;}
+.item:nth-child(3){ flex-grow: 1;}
